@@ -71,18 +71,24 @@ begin
                     next_state <= s0;
                 end if;
             when others =>
-                cuenta <= cuenta + 1;
                 if micro_data = '1' then
-                    dato1 <= dato1 + 1;
+                    dato2 <= dato2 + 1;                
                 end if;
-                if primer_ciclo='1' and cuenta = 106 then
-                    sample_out <= std_logic_vector(dato2);
-                    dato2 <= (others => '0');
-                    sample_out_ready <= enable_4_cycles;
-                else
+                if cuenta = 299 then
+                    cuenta = 0;
+                    primer_ciclo = '1';
                     sample_out_ready <= '0';
+                else
+                    cuenta = cuenta +1;
+                    if cuenta = 256 then
+                        sample_out <= std_logic_vector(dato1);
+                        dato1 <= (others => '0');
+                        sample_out_ready <= enable_4_cycles;
+                    else
+                        sample_out_ready <= '0';
+                    end if;
                 end if;
-                if cuenta > 150 then
+                if cuenta = 0 then
                     next_state <= s0;
                 end if;
         end case;
