@@ -15,48 +15,50 @@ end FSMD_microphone;
 architecture Behavioral of FSMD_microphone is
 
 type state_type is (start, s0, s1, s2);
-signal state, next_state : state_type := start;
+signal state, state_next : state_type := start;
 signal dato1, dato2 : unsigned(7 downto 0) := (others => '0');
 signal primer_ciclo : std_logic := '0';
-signal cuenta : unsigned(8 downto 0) := (others => '0');
+signal cuenta, cuenta_next : unsigned(8 downto 0) := (others => '0');
 
 begin
 
 process(clk_12megas)
 begin
     if rising_edge(clk_12megas) then
-        state <= next_state;
+        state <= state_next;
+        cuenta <= cuenta_next;
     end if;
 end process;
 
-process(state)
+process(state, cuenta, reset, micro_data)
 begin
-    next_state <= state;
+    state_next <= state;
+    cuenta_next <= cuenta;
     if reset='1' then
-        next_state <= start;
+        state_next <= start;
     else
         case state is
             when start =>
-                cuenta <= (others => '0');
+                cuenta_next <= (others => '0');
                 dato1 <= (others => '0');
                 dato2 <= (others => '0');
                 primer_ciclo <= '0';
-                next_state <= s0;
+                state_next <= s0;
             when s0 =>
-                cuenta <= cuenta + 1;
+                cuenta_next <= cuenta + 1;
                 if micro_data = '1' then
                     dato1 <= dato1 + 1;
                     dato2 <= dato2 + 1;
                 end if;
                 if cuenta > 105 then
                     if cuenta > 255 then
-                        next_state <= s2;
-                    else
-                        next_state <= s1;
+                        state_next <= s2;
+                    elsif cuenta < 150 then
+                        state_next <= s1;
                     end if;
                 end if;
             when s1 =>
-                cuenta <= cuenta + 1;
+                cuenta_next <= cuenta + 1;
                 if micro_data = '1' then
                     dato1 <= dato1 + 1;
                 end if;
@@ -68,28 +70,27 @@ begin
                     sample_out_ready <= '0';
                 end if;
                 if cuenta > 150 then
-                    next_state <= s0;
+                    state_next <= s0;
                 end if;
             when others =>
                 if micro_data = '1' then
                     dato2 <= dato2 + 1;                
                 end if;
                 if cuenta = 299 then
-                    cuenta <= (others => '0');
+                    cuenta_next <= (others => '0');
                     primer_ciclo <= '1';
-                    sample_out_ready <= '0';
                 else
-                    cuenta <= cuenta +1;
-                    if cuenta = 256 then
-                        sample_out <= std_logic_vector(dato1);
-                        dato1 <= (others => '0');
-                        sample_out_ready <= enable_4_cycles;
-                    else
-                        sample_out_ready <= '0';
-                    end if;
+                    cuenta_next <= cuenta +1;
+                end if;
+                if cuenta = 257 then
+                    sample_out <= std_logic_vector(dato1);
+                    dato1 <= (others => '0');
+                    sample_out_ready <= enable_4_cycles;
+                else
+                    sample_out_ready <= '0';
                 end if;
                 if cuenta = 0 then
-                    next_state <= s0;
+                    state_next <= s0;
                 end if;
         end case;
     end if;

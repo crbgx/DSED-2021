@@ -2,10 +2,10 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Nov 12 12:47:44 2021
-# Process ID: 6128
+# Start of session at: Fri Nov 12 13:30:17 2021
+# Process ID: 20272
 # Current directory: C:/Users/efrenbg1/Desktop/DSED-2021
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18596 C:\Users\efrenbg1\Desktop\DSED-2021\DSED-2021.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11068 C:\Users\efrenbg1\Desktop\DSED-2021\DSED-2021.xpr
 # Log file: C:/Users/efrenbg1/Desktop/DSED-2021/vivado.log
 # Journal file: C:/Users/efrenbg1/Desktop/DSED-2021\vivado.jou
 #-----------------------------------------------------------
@@ -17,210 +17,6 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
 update_compile_order -fileset sources_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd w ]
-add_files -fileset sim_1 C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd
-update_compile_order -fileset sim_1
-launch_simulation
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'en_4_cycles_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj en_4_cycles_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity clk_wiz_0_clk_wiz_0_clk_wiz
-INFO: [VRFC 10-307] analyzing entity clk_wiz_0
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/en_4_cycles.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity en_4_cycles
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/en_4_cycles_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity en_4_cycles_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot en_4_cycles_tb_behav xil_defaultlib.en_4_cycles_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package unisim.vcomponents
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_signed
-Compiling package ieee.vital_timing
-Compiling package ieee.vital_primitives
-Compiling package unisim.vpkg
-Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
-Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,9,1,1,1,4,1,7)\]
-Compiling architecture mmcme2_adv_v of entity unisim.MMCME2_ADV [\MMCME2_ADV(clkfbout_mult_f=49.8...]
-Compiling architecture structure of entity xil_defaultlib.clk_wiz_0_clk_wiz_0_clk_wiz [clk_wiz_0_clk_wiz_0_clk_wiz_defa...]
-Compiling architecture structure of entity xil_defaultlib.clk_wiz_0 [clk_wiz_0_default]
-Compiling architecture behavioral of entity xil_defaultlib.en_4_cycles [en_4_cycles_default]
-Compiling architecture behavioral of entity xil_defaultlib.en_4_cycles_tb
-Built simulation snapshot en_4_cycles_tb_behav
-
-****** Webtalk v2017.2 (64-bit)
-  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
-  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-source C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav/xsim.dir/en_4_cycles_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri Nov 12 12:55:58 2021...
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "en_4_cycles_tb_behav -key {Behavioral:sim_1:Functional:en_4_cycles_tb} -tclbatch {en_4_cycles_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-source en_4_cycles_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'en_4_cycles_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 849.672 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'en_4_cycles_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj en_4_cycles_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity clk_wiz_0_clk_wiz_0_clk_wiz
-INFO: [VRFC 10-307] analyzing entity clk_wiz_0
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/en_4_cycles.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity en_4_cycles
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/en_4_cycles_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity en_4_cycles_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot en_4_cycles_tb_behav xil_defaultlib.en_4_cycles_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package unisim.vcomponents
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_signed
-Compiling package ieee.vital_timing
-Compiling package ieee.vital_primitives
-Compiling package unisim.vpkg
-Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
-Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,9,1,1,1,4,1,7)\]
-Compiling architecture mmcme2_adv_v of entity unisim.MMCME2_ADV [\MMCME2_ADV(clkfbout_mult_f=49.8...]
-Compiling architecture structure of entity xil_defaultlib.clk_wiz_0_clk_wiz_0_clk_wiz [clk_wiz_0_clk_wiz_0_clk_wiz_defa...]
-Compiling architecture structure of entity xil_defaultlib.clk_wiz_0 [clk_wiz_0_default]
-Compiling architecture behavioral of entity xil_defaultlib.en_4_cycles [en_4_cycles_default]
-Compiling architecture behavioral of entity xil_defaultlib.en_4_cycles_tb
-Built simulation snapshot en_4_cycles_tb_behav
-
-****** Webtalk v2017.2 (64-bit)
-  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
-  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-source C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav/xsim.dir/en_4_cycles_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri Nov 12 12:56:28 2021...
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "en_4_cycles_tb_behav -key {Behavioral:sim_1:Functional:en_4_cycles_tb} -tclbatch {en_4_cycles_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-source en_4_cycles_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'en_4_cycles_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 853.770 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-set_property top FSMD_microphone_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-update_compile_order -fileset sim_1
-launch_simulation
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-ERROR: [XSIM 43-3249] File C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd, line 18. Unresolved signal "next_state" is multiply driven.
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date
-[Fri Nov 12 12:58:11 2021] Launched synth_1...
-Run output will be captured here: C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.runs/synth_1/runme.log
 launch_simulation
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -262,231 +58,7 @@ Built simulation snapshot FSMD_microphone_tb_behav
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 source C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav/xsim.dir/FSMD_microphone_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri Nov 12 12:59:55 2021...
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "FSMD_microphone_tb_behav -key {Behavioral:sim_1:Functional:FSMD_microphone_tb} -tclbatch {FSMD_microphone_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-source FSMD_microphone_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 873.934 ; gain = 0.000
-INFO: [Common 17-344] 'run' was cancelled
-INFO: [Common 17-344] 'source' was cancelled
-xsim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 873.934 ; gain = 0.000
-INFO: [Common 17-344] 'xsim' was cancelled
-INFO: [Vivado 12-5357] 'simulate' step aborted
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 873.934 ; gain = 0.000
-INFO: [Common 17-344] 'launch_simulation' was cancelled
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-
-****** Webtalk v2017.2 (64-bit)
-  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
-  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-source C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav/xsim.dir/FSMD_microphone_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri Nov 12 13:00:26 2021...
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "FSMD_microphone_tb_behav -key {Behavioral:sim_1:Functional:FSMD_microphone_tb} -tclbatch {FSMD_microphone_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-source FSMD_microphone_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 873.934 ; gain = 0.000
-INFO: [Common 17-344] 'run' was cancelled
-INFO: [Common 17-344] 'source' was cancelled
-xsim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 873.934 ; gain = 0.000
-INFO: [Common 17-344] 'xsim' was cancelled
-INFO: [Vivado 12-5357] 'simulate' step aborted
-launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 873.934 ; gain = 0.000
-INFO: [Common 17-344] 'launch_simulation' was cancelled
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_project
-open_project C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.xpr
-Scanning sources...
-Finished scanning sources
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
-update_compile_order -fileset sources_1
-launch_simulation
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-
-****** Webtalk v2017.2 (64-bit)
-  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
-  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-source C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav/xsim.dir/FSMD_microphone_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri Nov 12 13:02:12 2021...
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "FSMD_microphone_tb_behav -key {Behavioral:sim_1:Functional:FSMD_microphone_tb} -tclbatch {FSMD_microphone_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-source FSMD_microphone_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 885.223 ; gain = 0.000
-INFO: [Common 17-344] 'run' was cancelled
-INFO: [Common 17-344] 'source' was cancelled
-xsim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 885.223 ; gain = 0.000
-INFO: [Common 17-344] 'xsim' was cancelled
-INFO: [Vivado 12-5357] 'simulate' step aborted
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:21 . Memory (MB): peak = 885.223 ; gain = 0.000
-INFO: [Common 17-344] 'launch_simulation' was cancelled
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-
-****** Webtalk v2017.2 (64-bit)
-  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
-  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-source C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav/xsim.dir/FSMD_microphone_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri Nov 12 13:02:47 2021...
+INFO: [Common 17-206] Exiting Webtalk at Fri Nov 12 13:31:32 2021...
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
@@ -508,6 +80,7 @@ source FSMD_microphone_tb.tcl
 # run 1000ns
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'FSMD_microphone_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 842.035 ; gain = 0.000
 relaunch_sim
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -546,7 +119,7 @@ Built simulation snapshot FSMD_microphone_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Vivado Simulator 2017.2
 Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 891.270 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 866.809 ; gain = 0.000
 relaunch_sim
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -623,6 +196,18 @@ Built simulation snapshot FSMD_microphone_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Vivado Simulator 2017.2
 Time resolution is 1 ps
+run 1000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 66
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 86
 relaunch_sim
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -661,7 +246,282 @@ Built simulation snapshot FSMD_microphone_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Vivado Simulator 2017.2
 Time resolution is 1 ps
-add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 46
+run 100000 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
+Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
+Built simulation snapshot FSMD_microphone_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav/xsim.dir/FSMD_microphone_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Nov 12 13:38:18 2021...
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "FSMD_microphone_tb_behav -key {Behavioral:sim_1:Functional:FSMD_microphone_tb} -tclbatch {FSMD_microphone_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source FSMD_microphone_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'FSMD_microphone_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 100000 ns
+launch_simulation -mode post-synthesis -type functional
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'UUT'
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'UUT/inst'
+Finished Parsing XDC File [c:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'UUT/inst'
+Parsing XDC File [c:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'UUT/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1527.465 ; gain = 444.309
+Finished Parsing XDC File [c:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'UUT/inst'
+Parsing XDC File [C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 1613.754 ; gain = 746.945
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-26] write_vhdl -mode funcsim -nolib -force -file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/synth/func/FSMD_microphone_tb_func_synth.vhd"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/synth/func/FSMD_microphone_tb_func_synth.vhd
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/synth/func'
+INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/synth/func'
+"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/synth/func/FSMD_microphone_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity \clk_wiz_0__clk_wiz_0_clk_wiz\
+INFO: [VRFC 10-307] analyzing entity clk_wiz_0
+INFO: [VRFC 10-307] analyzing entity en_4_cycles
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/synth/func'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FSMD_microphone_tb_func_synth xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
+Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
+Built simulation snapshot FSMD_microphone_tb_func_synth
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/synth/func/xsim.dir/FSMD_microphone_tb_func_synth/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Nov 12 13:38:49 2021...
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/synth/func'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "FSMD_microphone_tb_func_synth -key {Post-Synthesis:sim_1:Functional:FSMD_microphone_tb} -tclbatch {FSMD_microphone_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source FSMD_microphone_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'FSMD_microphone_tb_func_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1628.867 ; gain = 762.059
+run 100000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 34
+relaunch_sim
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-26] write_vhdl -mode funcsim -nolib -force -file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/synth/func/FSMD_microphone_tb_func_synth.vhd"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/synth/func/FSMD_microphone_tb_func_synth.vhd
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/synth/func'
+INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/synth/func'
+"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/synth/func/FSMD_microphone_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity \clk_wiz_0__clk_wiz_0_clk_wiz\
+INFO: [VRFC 10-307] analyzing entity clk_wiz_0
+INFO: [VRFC 10-307] analyzing entity en_4_cycles
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/synth/func'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FSMD_microphone_tb_func_synth xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
+Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
+Built simulation snapshot FSMD_microphone_tb_func_synth
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+Stopped at time : 0 fs : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1640.508 ; gain = 0.000
+run 100000 ns
+run 100000 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
+Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
+Built simulation snapshot FSMD_microphone_tb_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav/xsim.dir/FSMD_microphone_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Nov 12 14:56:03 2021...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "FSMD_microphone_tb_behav -key {Behavioral:sim_1:Functional:FSMD_microphone_tb} -tclbatch {FSMD_microphone_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source FSMD_microphone_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'FSMD_microphone_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1640.508 ; gain = 0.000
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 35
 relaunch_sim
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -700,11 +560,20 @@ Built simulation snapshot FSMD_microphone_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Vivado Simulator 2017.2
 Time resolution is 1 ps
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 46
+Stopped at time : 0 fs : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 35
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1640.508 ; gain = 0.000
+run 100000 ns
+Stopped at time : 0 fs : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 35
+run 100000 ns
+Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 35
+run 100000 ns
+Stopped at time : 124500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 35
+run 100000 ns
+Stopped at time : 207500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 35
 run all
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 891.270 ; gain = 0.000
-INFO: [Common 17-344] 'run' was cancelled
+Stopped at time : 290500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 35
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 35
+run 100000 ns
 relaunch_sim
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -743,54 +612,7 @@ Built simulation snapshot FSMD_microphone_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Vivado Simulator 2017.2
 Time resolution is 1 ps
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 46
-step
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 47
-step
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 48
-step
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 49
-step
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 51
-step
-Stopped at time : 83 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 40
-step
-Stopped at time : 83 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 37
-step
-Stopped at time : 83 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 27
-step
-Stopped at time : 124500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 38
-step
-Stopped at time : 124500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 39
-step
-Stopped at time : 124500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 27
-step
-Stopped at time : 124500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
-step
-Stopped at time : 166 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 40
-step
-Stopped at time : 166 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 37
-step
-Stopped at time : 166 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 27
-step
-Stopped at time : 207500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 38
-step
-Stopped at time : 207500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 39
-step
-Stopped at time : 207500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 27
-step
-Stopped at time : 207500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
-step
-Stopped at time : 249 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 40
-step
-Stopped at time : 249 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 37
-step
-Stopped at time : 249 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 27
-step
-Stopped at time : 290500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 38
-step
-Stopped at time : 290500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 39
-add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 52
+run 100000 ns
 relaunch_sim
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -829,36 +651,16 @@ Built simulation snapshot FSMD_microphone_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Vivado Simulator 2017.2
 Time resolution is 1 ps
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 46
-step
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 47
-step
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 48
-step
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 49
-step
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 51
-step
-Stopped at time : 83 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 40
-step
-Stopped at time : 83 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 37
-step
-Stopped at time : 83 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 27
-step
-Stopped at time : 124500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 38
-step
-Stopped at time : 124500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 39
-step
-Stopped at time : 124500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 27
-step
-Stopped at time : 124500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
-step
-Stopped at time : 166 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 40
-step
-Stopped at time : 166 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 37
-step
-Stopped at time : 166 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 27
-remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 46
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 61
 relaunch_sim
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -897,26 +699,207 @@ Built simulation snapshot FSMD_microphone_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Vivado Simulator 2017.2
 Time resolution is 1 ps
+run 10000 ns
+Stopped at time : 8922500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 61
 step
-Stopped at time : 1037500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 38
+Stopped at time : 8922500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 62
 step
-Stopped at time : 1037500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 39
+Stopped at time : 8922500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 63
 step
-Stopped at time : 1037500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 27
+Stopped at time : 8922500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 65
 step
-Stopped at time : 1037500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
+Stopped at time : 8922500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 70
 step
-Stopped at time : 1079 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 40
+Stopped at time : 8922500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 72
 step
-Stopped at time : 1079 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 37
+Stopped at time : 8964 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 40
+run 10000 ns
+Stopped at time : 9005500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 61
+run 10000 ns
+Stopped at time : 9088500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 61
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 61
+run 10000 ns
+relaunch_sim
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
+Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
+Built simulation snapshot FSMD_microphone_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+run 10000 ns
+run 10000 ns
+run 10000 ns
+relaunch_sim
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
+Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
+Built simulation snapshot FSMD_microphone_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+run 100000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 79
+relaunch_sim
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
+Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
+Built simulation snapshot FSMD_microphone_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+run 100000 ns
+Stopped at time : 21372500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 79
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 80
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 79
+run 100000 ns
+Stopped at time : 24858500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 80
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 84
+run 100000 ns
+Stopped at time : 24941500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 84
+run 100000 ns
+Stopped at time : 46272500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 84
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 84
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 86
+run 100000 ns
+Stopped at time : 49758500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 80
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 80
+run 100000 ns
+run 100000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 85
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 86
+relaunch_sim
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
+Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
+Built simulation snapshot FSMD_microphone_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+run 100000 ns
+Stopped at time : 21372500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 85
 step
-Stopped at time : 1079 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 27
-step
-Stopped at time : 1120500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 38
-step
-Stopped at time : 1120500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 39
-add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 48
-remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 52
+Stopped at time : 21372500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 90
 relaunch_sim
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -955,23 +938,18 @@ Built simulation snapshot FSMD_microphone_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Vivado Simulator 2017.2
 Time resolution is 1 ps
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 48
-add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 34
-remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 48
-step
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 49
-step
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 51
-step
-Stopped at time : 83 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 40
-step
-Stopped at time : 83 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" Line 37
-step
-Stopped at time : 83 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 27
-run 80 ns
-run all
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-INFO: [Common 17-344] 'run' was cancelled
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1640.508 ; gain = 0.000
+run 100000 ns
+Stopped at time : 21372500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 85
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 86
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 86
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 86
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 85
+run 100000 ns
+run 100000 ns
+run 100000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 85
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 86
 relaunch_sim
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -1010,17 +988,8 @@ Built simulation snapshot FSMD_microphone_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Vivado Simulator 2017.2
 Time resolution is 1 ps
-Stopped at time : 0 fs : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-run 80 ns
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
+run 100000 ns
+Stopped at time : 21372500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 85
 relaunch_sim
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -1059,574 +1028,16 @@ Built simulation snapshot FSMD_microphone_tb_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Vivado Simulator 2017.2
 Time resolution is 1 ps
-Stopped at time : 0 fs : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 28
-remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 34
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 891.270 ; gain = 0.000
-run 80 ns
-run 80 ns
-Stopped at time : 124500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
-run 80 ns
-run 80 ns
-Stopped at time : 207500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
-run 80 ns
-run 80 ns
-Stopped at time : 290500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
-run 80 ns
-run 80 ns
-Stopped at time : 373500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
-run 80 ns
-run 80 ns
-Stopped at time : 456500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
-run 80 ns
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
-run 80 ns
-run 80 ns
-Stopped at time : 124500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
-run 80 ns
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
-relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 891.270 ; gain = 0.000
-run 80 ns
-remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 28
-run 80 ns
-run 80 ns
-run 80 ns
-add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 34
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-Stopped at time : 0 fs : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-run 80 ns
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-Stopped at time : 0 fs : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-run 80 ns
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-Stopped at time : 0 fs : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 34
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 34
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-Stopped at time : 0 fs : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-Stopped at time : 0 fs : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 28
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-Stopped at time : 0 fs : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-run 80 ns
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
-run 80 ns
-Stopped at time : 41500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-run 80 ns
-Stopped at time : 83 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-run 80 ns
-Stopped at time : 124500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 28
-run 80 ns
-Stopped at time : 124500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-run 80 ns
-Stopped at time : 166 ns : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 34
-remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 34
-remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 28
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-run 80 ns
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-INFO: [SIM-utils-54] Inspecting design source files for 'FSMD_microphone_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj FSMD_microphone_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto bfa3106fb46e4d988bc7840eb5121532 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot FSMD_microphone_tb_behav xil_defaultlib.FSMD_microphone_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_microphone_tb
-Built simulation snapshot FSMD_microphone_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2017.2
-Time resolution is 1 ps
+run 100000 ns
+Stopped at time : 21372500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 85
+run 100000 ns
+Stopped at time : 21455500 ps : File "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" Line 85
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 85
+run 100000 ns
+save_wave_config {C:/Users/efrenbg1/Desktop/DSED-2021/FSMD_microphone_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/efrenbg1/Desktop/DSED-2021/FSMD_microphone_tb_behav.wcfg
+set_property xsim.view C:/Users/efrenbg1/Desktop/DSED-2021/FSMD_microphone_tb_behav.wcfg [get_filesets sim_1]
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 12 13:29:12 2021...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 12 15:17:01 2021...
