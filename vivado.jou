@@ -128,3 +128,101 @@ run 80 ns
 run 80 ns
 run 80 ns
 relaunch_sim
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 28
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 34
+relaunch_sim
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+relaunch_sim
+run 80 ns
+run 80 ns
+run 80 ns
+relaunch_sim
+run 80 ns
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 28
+run 80 ns
+run 80 ns
+run 80 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 34
+relaunch_sim
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+relaunch_sim
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+relaunch_sim
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 34
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 34
+relaunch_sim
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+relaunch_sim
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 28
+relaunch_sim
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 34
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 28
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+run 80 ns
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
