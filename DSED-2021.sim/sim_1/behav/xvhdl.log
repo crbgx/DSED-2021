@@ -1,4 +1,4 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/en_4_cycles.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity en_4_cycles
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/en_4_cycles_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity en_4_cycles_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sim_1/new/FSMD_microphone_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FSMD_microphone_tb

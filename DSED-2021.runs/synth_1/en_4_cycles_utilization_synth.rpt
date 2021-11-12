@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Sat Nov  6 15:52:43 2021
+| Date         : Fri Nov 12 12:58:32 2021
 | Host         : DELL-527 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file en_4_cycles_utilization_synth.rpt -pb en_4_cycles_utilization_synth.pb
 | Design       : en_4_cycles

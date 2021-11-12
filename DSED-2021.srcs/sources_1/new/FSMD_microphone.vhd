@@ -8,28 +8,28 @@ entity FSMD_microphone is
            reset : in STD_LOGIC;
            enable_4_cycles : in STD_LOGIC;
            micro_data : in STD_LOGIC;
-           sample_out : out STD_LOGIC_VECTOR(7 downto 0);       --(sample_size-1 downto 0)
-           sample_out_ready : out STD_LOGIC);
+           sample_out : out STD_LOGIC_VECTOR(7 downto 0) := (others => '0');       --(sample_size-1 downto 0)
+           sample_out_ready : out STD_LOGIC := '0');
 end FSMD_microphone;
 
 architecture Behavioral of FSMD_microphone is
 
 type state_type is (start, s0, s1, s2);
 signal state, next_state : state_type := start;
-signal cuenta : unsigned(8 downto 0) := (others => '0');
 signal dato1, dato2 : unsigned(7 downto 0) := (others => '0');
 signal primer_ciclo : std_logic := '0';
+signal cuenta : unsigned(8 downto 0) := (others => '0');
 
 begin
 
 process(clk_12megas)
 begin
     if rising_edge(clk_12megas) then
-        next_state <= state;
+        state <= next_state;
     end if;
 end process;
 
-process(next_state)
+process(state)
 begin
     next_state <= state;
     if reset='1' then
@@ -75,11 +75,11 @@ begin
                     dato2 <= dato2 + 1;                
                 end if;
                 if cuenta = 299 then
-                    cuenta = 0;
-                    primer_ciclo = '1';
+                    cuenta <= (others => '0');
+                    primer_ciclo <= '1';
                     sample_out_ready <= '0';
                 else
-                    cuenta = cuenta +1;
+                    cuenta <= cuenta +1;
                     if cuenta = 256 then
                         sample_out <= std_logic_vector(dato1);
                         dato1 <= (others => '0');
@@ -93,7 +93,6 @@ begin
                 end if;
         end case;
     end if;
-    
 end process;
 
 end Behavioral;
