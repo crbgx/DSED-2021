@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="121455500001fs"></ZoomEndTime>
-      <Cursor1Time time="121455500000fs"></Cursor1Time>
+      <ZoomEndTime time="37000000001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="154"></NameColumnWidth>
-      <ValueColumnWidth column_width="74"></ValueColumnWidth>
+      <ValueColumnWidth column_width="70"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="15" />
    <wvobject fp_name="/FSMD_microphone_tb/clk_12megas" type="logic">
       <obj_property name="ElementShortName">clk_12megas</obj_property>
       <obj_property name="ObjectShortName">clk_12megas</obj_property>
@@ -72,5 +72,13 @@
    <wvobject fp_name="/FSMD_microphone_tb/UUT/dato2" type="array">
       <obj_property name="ElementShortName">dato2[7:0]</obj_property>
       <obj_property name="ObjectShortName">dato2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSMD_microphone_tb/UUT/dato1_next" type="array">
+      <obj_property name="ElementShortName">dato1_next[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dato1_next[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FSMD_microphone_tb/UUT/dato2_next" type="array">
+      <obj_property name="ElementShortName">dato2_next[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dato2_next[7:0]</obj_property>
    </wvobject>
 </wave_config>

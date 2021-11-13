@@ -1,0 +1,130 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Nov 12 13:30:17 2021
+# Process ID: 20272
+# Current directory: C:/Users/efrenbg1/Desktop/DSED-2021
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11068 C:\Users\efrenbg1\Desktop\DSED-2021\DSED-2021.xpr
+# Log file: C:/Users/efrenbg1/Desktop/DSED-2021/vivado.log
+# Journal file: C:/Users/efrenbg1/Desktop/DSED-2021\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source FSMD_microphone_tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 1000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 66
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 86
+relaunch_sim
+run 100000 ns
+close_sim
+launch_simulation
+source FSMD_microphone_tb.tcl
+run 100000 ns
+launch_simulation -mode post-synthesis -type functional
+source FSMD_microphone_tb.tcl
+run 100000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 34
+relaunch_sim
+run 100000 ns
+run 100000 ns
+close_sim
+close_sim
+launch_simulation
+source FSMD_microphone_tb.tcl
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 35
+relaunch_sim
+run 100000 ns
+run 100000 ns
+run 100000 ns
+run 100000 ns
+run all
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 35
+run 100000 ns
+relaunch_sim
+run 100000 ns
+relaunch_sim
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+run 10000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 61
+relaunch_sim
+run 10000 ns
+step
+step
+step
+step
+step
+step
+run 10000 ns
+run 10000 ns
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 61
+run 10000 ns
+relaunch_sim
+run 10000 ns
+run 10000 ns
+run 10000 ns
+relaunch_sim
+run 100000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 79
+relaunch_sim
+run 100000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 80
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 79
+run 100000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 84
+run 100000 ns
+run 100000 ns
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 84
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 86
+run 100000 ns
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 80
+run 100000 ns
+run 100000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 85
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 86
+relaunch_sim
+run 100000 ns
+step
+relaunch_sim
+run 100000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 86
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 86
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 86
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 85
+run 100000 ns
+run 100000 ns
+run 100000 ns
+add_bp {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} 85
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 86
+relaunch_sim
+run 100000 ns
+relaunch_sim
+run 100000 ns
+run 100000 ns
+remove_bps -file {C:/Users/efrenbg1/Desktop/DSED-2021/DSED-2021.srcs/sources_1/new/FSMD_microphone.vhd} -line 85
+run 100000 ns
+save_wave_config {C:/Users/efrenbg1/Desktop/DSED-2021/FSMD_microphone_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/efrenbg1/Desktop/DSED-2021/FSMD_microphone_tb_behav.wcfg
+set_property xsim.view C:/Users/efrenbg1/Desktop/DSED-2021/FSMD_microphone_tb_behav.wcfg [get_filesets sim_1]
+close_sim
