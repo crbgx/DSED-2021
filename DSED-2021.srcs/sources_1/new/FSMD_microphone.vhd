@@ -16,7 +16,7 @@ architecture Behavioral of FSMD_microphone is
 
 type state_type is (start, s0, s1, s2);
 signal state, state_next : state_type := start;
-signal dato1, dato2 : unsigned(7 downto 0) := (others => '0');
+signal dato1, dato2, dato1_next, dato2_next : unsigned(7 downto 0) := (others => '0');
 signal primer_ciclo : std_logic := '0';
 signal cuenta, cuenta_next : unsigned(8 downto 0) := (others => '0');
 
@@ -34,6 +34,8 @@ process(state, cuenta, reset, micro_data)
 begin
     state_next <= state;
     cuenta_next <= cuenta;
+    dato1_next <= dato1;
+    dato2_next <= dato2;
     if reset='1' then
         state_next <= start;
     else
@@ -50,8 +52,8 @@ begin
                     dato1 <= dato1 + 1;
                     dato2 <= dato2 + 1;
                 end if;
-                if cuenta > 105 then
-                    if cuenta > 255 then
+                if cuenta > 104 then
+                    if cuenta > 254 then
                         state_next <= s2;
                     elsif cuenta < 150 then
                         state_next <= s1;
@@ -69,7 +71,7 @@ begin
                 else
                     sample_out_ready <= '0';
                 end if;
-                if cuenta > 150 then
+                if cuenta > 148 then
                     state_next <= s0;
                 end if;
             when others =>
@@ -79,21 +81,27 @@ begin
                 if cuenta = 299 then
                     cuenta_next <= (others => '0');
                     primer_ciclo <= '1';
+                    state_next <= s0;
                 else
                     cuenta_next <= cuenta +1;
                 end if;
-                if cuenta = 257 then
-                    sample_out <= std_logic_vector(dato1);
-                    dato1 <= (others => '0');
+                if cuenta = 256 then
+                    --sample_out <= std_logic_vector(dato1);
+                    dato1_next <= (others => '0');
                     sample_out_ready <= enable_4_cycles;
                 else
                     sample_out_ready <= '0';
                 end if;
-                if cuenta = 0 then
-                    state_next <= s0;
-                end if;
+                --if cuenta_next = 0 then
+                  --  state_next <= s0;
+                --end if;
         end case;
     end if;
 end process;
 
+
+--OutputLogic
+sample_out <= std_logic_vector(dato1) when cuenta >= 256,
+                else std_logic_vector(dato2);
+                
 end Behavioral;
