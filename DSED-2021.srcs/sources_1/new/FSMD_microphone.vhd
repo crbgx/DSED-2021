@@ -76,6 +76,7 @@ begin
         when s0 =>
             if cuenta=299 then
                 cuenta_next <= (others => '0');
+                primer_ciclo_next <= '1';
             else
                 cuenta_next <= cuenta + 1;
             end if;
@@ -101,12 +102,7 @@ begin
                 sample_out_ready <= '0';
             end if;
         when others =>
-            if cuenta = 299 then
-                cuenta_next <= (others => '0');
-                primer_ciclo_next <= '1';
-            else
-                cuenta_next <= cuenta + 1;
-            end if;
+            cuenta_next <= cuenta + 1;
             if micro_data = '1' then
                 dato2_next <= dato2 + 1;                
             end if;

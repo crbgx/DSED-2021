@@ -2,11 +2,12 @@
 # Webtalk v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Mon Nov 15 10:18:14 2021
-# Process ID: 1112
+# Start of session at: Mon Nov 15 10:59:26 2021
+# Process ID: 1280
 # Current directory: D:/DSED-2021/DSED-2021.sim/sim_1/behav
-# Command line: wbtcv.exe -mode batch -source D:/DSED-2021/DSED-2021.sim/sim_1/behav/xsim.dir/FSMD_microphone_tb_17_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source D:/DSED-2021/DSED-2021.sim/sim_1/behav/xsim.dir/FSMD_microphone_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/DSED-2021/DSED-2021.sim/sim_1/behav/webtalk.log
 # Journal file: D:/DSED-2021/DSED-2021.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
-source D:/DSED-2021/DSED-2021.sim/sim_1/behav/xsim.dir/FSMD_microphone_tb_17_behav/webtalk/xsim_webtalk.tcl -notrace
+source D:/DSED-2021/DSED-2021.sim/sim_1/behav/xsim.dir/FSMD_microphone_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Nov 15 10:59:27 2021...
