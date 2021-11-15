@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../DSED-2021.srcs/sources_1/new/pwm_audio_mono.vhd"
+vhdl xil_defaultlib  "../../../DSED-2021.srcs/sim_1/new/pwm_tb.vhd"
+
+# Do not sort compile order
+nosort
