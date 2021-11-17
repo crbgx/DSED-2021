@@ -97,9 +97,6 @@ begin
             end if;
             if primer_ciclo='1' and cuenta = 106 then
                 sample_out <= std_logic_vector(dato2);
-                sample_out_ready <= enable_4_cycles;
-            else
-                sample_out_ready <= '0';
             end if;
         when others =>
             cuenta_next <= cuenta + 1;
@@ -108,11 +105,12 @@ begin
             end if;
             if cuenta = 256 then
                 sample_out <= std_logic_vector(dato1);
-                sample_out_ready <= enable_4_cycles;
-            else
-                sample_out_ready <= '0';
             end if;
     end case;
 end process;
+
+sample_out_ready <= enable_4_cycles when cuenta=256 else
+                    enable_4_cycles when primer_ciclo='1' and cuenta = 106 else
+                    '0';
                 
 end Behavioral;
