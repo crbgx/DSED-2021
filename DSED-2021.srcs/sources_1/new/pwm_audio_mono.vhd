@@ -33,8 +33,10 @@ end process;
 
 cuenta_next <= cuenta + 1 when cuenta < 299 else
                (others => '0');
-buf_next <= '1' when (cuenta < unsigned(sample_in)) or (unsigned(sample_in) = 0) else
+buf_next <= '1' when cuenta_next < unsigned(sample_in) else
             '0';
 pwm_pulse <= buf_reg;
+sample_request <= '1' when cuenta=299 and en_2_cycles='1' else
+                  '0';
 
 end Behavioral;

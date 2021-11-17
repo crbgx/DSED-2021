@@ -33,17 +33,22 @@ UUT : pwm port map(
 
 process 
 begin
-    wait for clk_period/2;
     clk_12megas <= '1';
     wait for clk_period/2;
     clk_12megas <= '0';
+    wait for clk_period/2;
 end process;
 
-process
+process 
 begin
-    sample_in <= "00010010";
     en_2_cycles <= '1';
-    wait;
+    wait for clk_period;
+    en_2_cycles <= '0';
+    wait for clk_period;
 end process;
+
+--sample_in <= "00000000";
+sample_in <= "11111111";
+--sample_in <= "11000111";
 
 end Behavioral;
