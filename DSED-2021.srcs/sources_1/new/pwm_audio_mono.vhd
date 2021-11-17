@@ -1,13 +1,14 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+use work.package_dsed.all;
 
 entity pwm is
 port(
     clk_12megas: in std_logic;
     reset: in std_logic;
     en_2_cycles: in std_logic;
-    sample_in: in std_logic_vector(7 downto 0);     --sample_size-1 downto 0 (VER CLASE 18)
+    sample_in: in std_logic_vector(sample_size-1 downto 0);
     sample_request: out std_logic;
     pwm_pulse: out std_logic
 );

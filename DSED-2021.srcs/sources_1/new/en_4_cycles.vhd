@@ -13,25 +13,36 @@ end en_4_cycles;
 architecture Behavioral of en_4_cycles is
 
 signal count, count_next : unsigned(1 downto 0) := (others => '0');
-signal reset_hold, clk : std_logic := '0';
-component clk_wiz_0 port (
-    clk_out1: out std_logic;
-    clk_in1: in std_logic);
-end component;
+signal reset_hold : std_logic := '0';
+--signal reset_hold, clk : std_logic := '0';
+--component clk_wiz_0 port (
+--    clk_out1: out std_logic;
+--    clk_in1: in std_logic);
+--end component;
 
 begin
 
-UUT : clk_wiz_0 port map(
-    clk_out1 => clk,
-    clk_in1 => clk_12megas
-);
+--UUT : clk_wiz_0 port map(
+--    clk_out1 => clk,
+--    clk_in1 => clk_12megas
+--);
 
-process(clk, reset)
+--process(clk, reset)
+--begin
+--    if reset='1' then
+--        count <= (others => '0');
+--        reset_hold <= '1';
+--    elsif rising_edge(clk) then
+--        count <= count_next;
+--        reset_hold <= '0';
+--    end if;
+--end process;
+process(clk_12megas, reset)
 begin
     if reset='1' then
         count <= (others => '0');
         reset_hold <= '1';
-    elsif rising_edge(clk) then
+    elsif rising_edge(clk_12megas) then
         count <= count_next;
         reset_hold <= '0';
     end if;

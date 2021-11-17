@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+use work.package_dsed.all;
 
 
 entity FSMD_microphone is
@@ -8,7 +9,7 @@ entity FSMD_microphone is
            reset : in STD_LOGIC;
            enable_4_cycles : in STD_LOGIC;
            micro_data : in STD_LOGIC;
-           sample_out : out STD_LOGIC_VECTOR(7 downto 0) := (others => '0');       --(sample_size-1 downto 0)
+           sample_out : out STD_LOGIC_VECTOR(sample_size-1 downto 0) := (others => '0');       --(sample_size-1 downto 0)
            sample_out_ready : out STD_LOGIC := '0');
 end FSMD_microphone;
 
@@ -16,7 +17,7 @@ architecture Behavioral of FSMD_microphone is
 
 type state_type is (start, s0, s1, s2);
 signal state, state_next : state_type := start;
-signal dato1, dato2, dato1_next, dato2_next : unsigned(7 downto 0) := (others => '0');
+signal dato1, dato2, dato1_next, dato2_next : unsigned(sample_size-1 downto 0) := (others => '0');
 signal primer_ciclo, primer_ciclo_next : std_logic := '0';
 signal cuenta, cuenta_next : unsigned(8 downto 0) := (others => '0');
 
