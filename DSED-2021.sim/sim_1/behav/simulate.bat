@@ -1,6 +1,6 @@
 @echo off
 set xv_path=C:\\Xilinx\\Vivado\\2017.2\\bin
-call %xv_path%/xsim pwm_tb_behav -key {Behavioral:sim_1:Functional:pwm_tb} -tclbatch pwm_tb.tcl -view D:/DSED-2021/FSMD_microphone_tb_behav.wcfg -log simulate.log
+call %xv_path%/xsim pwm_tb_behav -key {Behavioral:sim_1:Functional:pwm_tb} -tclbatch pwm_tb.tcl -log simulate.log
 if "%errorlevel%"=="0" goto SUCCESS
 if "%errorlevel%"=="1" goto END
 :END
