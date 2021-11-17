@@ -62,6 +62,13 @@ begin
 end process;
 
 record_enable <= '1';
-micro_data <= '1';
+
+process
+begin
+    micro_data <= '1';
+    wait for clk_period*500;
+    micro_data <= '0';
+    wait for clk_period*500;
+end process;
 
 end Behavioral;
