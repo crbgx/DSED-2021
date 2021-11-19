@@ -20,20 +20,21 @@ signal state, state_next : state_type := start;
 signal dato1, dato2, dato1_next, dato2_next : unsigned(sample_size-1 downto 0) := (others => '0');
 signal primer_ciclo, primer_ciclo_next : std_logic := '0';
 signal cuenta, cuenta_next : unsigned(8 downto 0) := (others => '0');
-
+signal sample_next, sample : STD_LOGIC_VECTOR(sample_size-1 downto 0) := (others => '0');
 begin
 
-process(clk_12megas, reset)
+process(clk_12megas)
 begin
     if rising_edge(clk_12megas) then
         if reset='1' then
             state <= start;
-        else
+        elsif enable_4_cycles = '1' then
             state <= state_next;
             cuenta <= cuenta_next;
             dato1 <= dato1_next;
             dato2 <= dato2_next;
             primer_ciclo <= primer_ciclo_next;
+            sample <= sample_next;
         end if;
     end if;
 end process;
@@ -63,11 +64,13 @@ begin
     end case;
 end process;
 
-process(state, state_next, cuenta, dato1, dato2, primer_ciclo, micro_data)
+process(state, state_next, cuenta, dato1, dato2, primer_ciclo, micro_data, sample)
 begin
     cuenta_next <= cuenta;
     dato1_next <= dato1;
     dato2_next <= dato2;
+    sample_next <= sample;
+    primer_ciclo_next <= primer_ciclo;
     case state_next is
         when start =>
             cuenta_next <= (others => '0');
@@ -86,7 +89,7 @@ begin
             elsif micro_data = '1' then
                 dato2_next <= dato2 + 1;
             end if;
-            if cuenta=256 then
+            if cuenta=299 then
                 dato1_next <= (others => '0');
             elsif micro_data = '1' then
                 dato1_next <= dato1 + 1;
@@ -97,7 +100,7 @@ begin
                 dato1_next <= dato1 + 1;
             end if;
             if primer_ciclo='1' and cuenta = 106 then
-                sample_out <= std_logic_vector(dato2);
+                sample_next <= std_logic_vector(dato2);
             end if;
         when others =>
             cuenta_next <= cuenta + 1;
@@ -105,7 +108,7 @@ begin
                 dato2_next <= dato2 + 1;                
             end if;
             if cuenta = 256 then
-                sample_out <= std_logic_vector(dato1);
+                sample_next <= std_logic_vector(dato1);
             end if;
     end case;
 end process;
@@ -113,5 +116,6 @@ end process;
 sample_out_ready <= enable_4_cycles when cuenta=256 else
                     enable_4_cycles when primer_ciclo='1' and cuenta = 106 else
                     '0';
+sample_out <= sample;
                 
 end Behavioral;

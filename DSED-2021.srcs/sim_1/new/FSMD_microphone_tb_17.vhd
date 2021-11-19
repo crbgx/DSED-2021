@@ -34,10 +34,18 @@ UUT : FSMD_microphone port map(
 
 process 
 begin
-    wait for clk_period/2;
     clk_12megas <= '1';
     wait for clk_period/2;
-    clk_12megas <= '0';
+    clk_12megas <= '0';    
+    wait for clk_period/2;
+end process;
+
+process 
+begin
+    enable_4_cycles <= '1';
+    wait for clk_period;
+    enable_4_cycles <= '0';
+    wait for 3*clk_period;
 end process;
 
 process
