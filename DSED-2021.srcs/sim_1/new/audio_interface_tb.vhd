@@ -62,6 +62,7 @@ begin
 end process;
 
 record_enable <= '1';
+play_enable <= '1';
 
 process
 begin
@@ -70,5 +71,7 @@ begin
     micro_data <= '0';
     wait for clk_period*500;
 end process;
+
+sample_in <= sample_out;
 
 end Behavioral;

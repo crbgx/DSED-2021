@@ -2,3 +2,4 @@ DSED-2021.cache
 *.wcfg
 DSED-2021.sim
 vivado*
+DSED-2021.runs/*

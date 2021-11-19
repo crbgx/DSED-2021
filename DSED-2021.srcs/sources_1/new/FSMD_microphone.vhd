@@ -63,7 +63,7 @@ begin
     end case;
 end process;
 
-process(state, state_next, cuenta, dato1, dato2, primer_ciclo)
+process(state, state_next, cuenta, dato1, dato2, primer_ciclo, micro_data)
 begin
     cuenta_next <= cuenta;
     dato1_next <= dato1;
