@@ -109,6 +109,7 @@ end process;
 
 -- Combinational logic
 r3_next <= resize(shift_right(shift_right(mult_in1 * mult_in2, 6)+1, 1), 8);
+--r3_next <= resize(shift_right(mult_in1 * mult_in2, 7), 8);
 mult_in1 <= c0 when state=s0 else
             c1 when state=s1 else
             c2 when state=s2 else
