@@ -19,7 +19,7 @@ component fir_filter Port (
        sample_out_ready : out STD_LOGIC);
 end component;
 signal clk, reset, sample_in_enable, filter_select, sample_out_ready : std_logic := '0';
-signal sample_in : unsigned (sample_size-1 downto 0) := (others => '0');
+signal sample_in : unsigned (sample_size-1 downto 0) := "00000011";
 signal sample_out : signed (sample_size-1 downto 0) := (others => '0');
 constant clk_period : time := 100 ns;
 
@@ -35,13 +35,18 @@ U1 : fir_filter port map(
     sample_out_ready => sample_out_ready
 );
 
-process (clk)
+process (sample_out_ready)
     FILE in_file : text OPEN read_mode IS "C:\Users\efrenbg1\Desktop\DSED-2021\Matlab\sample_in.dat";
+    FILE out_file : text OPEN write_mode IS "C:\Users\efrenbg1\Desktop\DSED-2021\Matlab\sample_out.dat";
     VARIABLE in_line : line;
+    VARIABLE out_line : line;
     VARIABLE in_int : integer;
+    VARIABLE out_int : integer;
     VARIABLE in_read_ok : BOOLEAN;
 BEGIN
-    if (clk'event and clk = '1') then
+    if (sample_out_ready'event and sample_out_ready = '1') then
+        Write(out_line, to_integer(sample_out));
+        WriteLine(out_file, out_line);
         if NOT endfile(in_file) then
             ReadLine(in_file,in_line);
             Read(in_line, in_int, in_read_ok);
