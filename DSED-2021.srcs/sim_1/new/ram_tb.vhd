@@ -47,11 +47,11 @@ begin
     wait for 200ns;
     wea <= "1";
     dina <= "10100110";
-    ena <= '0';
-    wait for 200 ns;
+    ena <= '1';
+    wait for 100 ns;
     wea <= "0";
     ena <= '0';
-    wait for 200 ns;
+    wait for 150 ns;
     ena <= '1';
     wait;
 end process;
