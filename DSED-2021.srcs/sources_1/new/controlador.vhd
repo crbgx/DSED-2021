@@ -73,8 +73,10 @@ end component;
 -- Señales internas
 type state_type is (idle, grabar, play);
 signal state, state_next : state_type := idle;
-signal clk_12megas, sample_out_ready, sample_request, wea, wea_next, ena, record_enable, record_enable_next : std_logic := '0';
-signal sample_out, sample_in, douta : std_logic_vector(sample_size-1 downto 0) := (others => '0');
+signal clk_12megas, sample_out_ready, sample_request, wea, wea_next, ena : std_logic := '0';
+signal record_enable, record_enable_next, sample_in_fir_enable : std_logic := '0';
+signal filter_select, sample_out_fir_ready : std_logic := '0';
+signal sample_out, sample_in, douta, sample_out_fir, sample_in_fir : std_logic_vector(sample_size-1 downto 0) := (others => '0');
 signal addra, addra_r, addra_r_next, addra_w, addra_w_next : STD_LOGIC_VECTOR(18 DOWNTO 0) := (others => '0');
 
 
@@ -107,7 +109,17 @@ memoria : blk_mem_gen_0 port map (
     addra => addra,
     dina => sample_out,
     douta => douta
-  );
+);
+  
+fir : fir_filter port map ( 
+     clk => clk_12megas,
+     reset => reset,
+     sample_in => unsigned(sample_in_fir),
+     sample_in_enable => sample_in_fir_enable,
+     filter_select => filter_select,
+     std_logic_vector(sample_out) => sample_out_fir,
+     sample_out_ready => sample_out_fir_ready
+);
 
 process(clk_12megas)
 begin
@@ -158,11 +170,18 @@ begin
                     addra_w_next <= std_logic_vector(unsigned(addra_w) + 1);
                     wea_next <= '1';
                 end if;
+            else
+                state_next <= idle;
             end if;
-            
         when play =>
-        
-        
+            if sample_request='1' then
+                if SW1='1' then
+                    sample_in_fir_next <= douta;
+                    sample_in_fir_next <= 
+                else
+                
+                end if;
+            end if;
     end case;
 
 end process;
@@ -171,5 +190,6 @@ ena <= sample_out_ready or sample_request;
 addra <= addra_w when state=grabar else
          addra_r when state=play else
          (others => '0');
+sample_in <= sample_out_fir
 
 end Behavioral;
