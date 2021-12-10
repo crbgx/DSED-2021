@@ -71,8 +71,12 @@ component fir_filter Port (
 end component;
 
 -- Señales internas
-signal clk_12megas, sample_request : std_logic := '0';
-signal sample_out, sample_in : std_logic_vector(sample_size-1 downto 0) := (others => '0');
+type state_type is (idle, grabar, play);
+signal state, state_next : state_type := idle;
+signal clk_12megas, sample_out_ready, sample_request, wea, wea_next, ena, record_enable, record_enable_next : std_logic := '0';
+signal sample_out, sample_in, douta : std_logic_vector(sample_size-1 downto 0) := (others => '0');
+signal addra, addra_r, addra_r_next, addra_w, addra_w_next : STD_LOGIC_VECTOR(18 DOWNTO 0) := (others => '0');
+
 
 begin
 
@@ -84,23 +88,88 @@ CLK : clk_wiz_0 port map (
 audio : audio_interface port map (  
     clk_12megas => clk_12megas,
     reset => reset,
-    record_enable => BTNL,
+    record_enable => record_enable,
     sample_out => sample_out,
     micro_clk => micro_clk,
     micro_data => micro_data,
     micro_LR => micro_LR,
     play_enable => '1',
-    sample_in => sample_out,
+    sample_in => sample_in,
     sample_request => sample_request,
     jack_sd => jack_sd,
     jack_pwm => jack_pwm
 );
 
-process(sample_out_ready)
+memoria : blk_mem_gen_0 port map (
+    clka => clk_12megas,
+    ena => ena,
+    wea(0) => sample_out_ready,
+    addra => addra,
+    dina => sample_out,
+    douta => douta
+  );
+
+process(clk_12megas)
 begin
-    if rising_edge(sample_out_ready) then
-        sample_in <= sample_out;
+    if rising_edge(clk_12megas) then
+        addra_r <= addra_r_next;
+        addra_w <= addra_w_next;
+        wea <= wea_next;
+        record_enable <= record_enable_next;
+        if reset='1' then
+            state <= idle;
+            addra_r <= (others => '0');
+            addra_w <= (others => '0');
+            wea <= '0';
+            record_enable <= '0';
+        else
+            state <= state_next;
+        end if;
     end if;
 end process;
+
+process(state, addra_r, addra_w, BTNL, BTNC, BTNR, SW0, SW1, sample_out_ready)
+begin
+    state_next <= state;
+    addra_r_next <= addra_r;
+    addra_w_next <= addra_w;
+    wea_next <= wea;
+    record_enable_next <= record_enable;
+    case state is
+        when idle =>
+            if BTNL='1' then
+                state_next <= grabar;
+            elsif BTNC='1' then
+                addra_w_next <= (others => '0');
+            elsif BTNR='1' then
+                state_next <= play;
+                if SW1='0' then
+                    if SW0='1' then
+                        addra_r_next <= addra_w;
+                    else
+                        addra_r_next <= (others => '0');
+                    end if;
+                end if;
+            end if;
+        when grabar =>
+            record_enable_next <= '1';
+            if BTNL='1' then
+                if sample_out_ready='1' then
+                    addra_w_next <= std_logic_vector(unsigned(addra_w) + 1);
+                    wea_next <= '1';
+                end if;
+            end if;
+            
+        when play =>
+        
+        
+    end case;
+
+end process;
+
+ena <= sample_out_ready or sample_request;
+addra <= addra_w when state=grabar else
+         addra_r when state=play else
+         (others => '0');
 
 end Behavioral;
