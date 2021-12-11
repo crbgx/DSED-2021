@@ -73,9 +73,9 @@ end component;
 -- Señales internas
 type state_type is (idle, grabar, play);
 signal state, state_next : state_type := idle;
-signal clk_12megas, sample_out_ready, sample_request, wea, wea_next, ena : std_logic := '0';
+signal clk_12megas, sample_out_ready, sample_request, play_enable, play_enable_next, sample_in_enable_fir, sample_in_enable_fir_next : std_logic := '0';
 signal record_enable, record_enable_next, sample_in_fir_enable : std_logic := '0';
-signal filter_select, sample_out_fir_ready : std_logic := '0';
+signal filter_select, sample_out_fir_ready, ena, ena_next, wea, wea_next : std_logic := '0';
 signal sample_out, sample_in, douta, sample_out_fir, sample_in_fir : std_logic_vector(sample_size-1 downto 0) := (others => '0');
 signal addra, addra_r, addra_r_next, addra_w, addra_w_next : STD_LOGIC_VECTOR(18 DOWNTO 0) := (others => '0');
 
@@ -92,10 +92,11 @@ audio : audio_interface port map (
     reset => reset,
     record_enable => record_enable,
     sample_out => sample_out,
+    sample_out_ready => sample_out_ready,
     micro_clk => micro_clk,
     micro_data => micro_data,
     micro_LR => micro_LR,
-    play_enable => '1',
+    play_enable => play_enable,
     sample_in => sample_in,
     sample_request => sample_request,
     jack_sd => jack_sd,
@@ -105,7 +106,7 @@ audio : audio_interface port map (
 memoria : blk_mem_gen_0 port map (
     clka => clk_12megas,
     ena => ena,
-    wea(0) => sample_out_ready,
+    wea(0) => wea,
     addra => addra,
     dina => sample_out,
     douta => douta
@@ -115,8 +116,8 @@ fir : fir_filter port map (
      clk => clk_12megas,
      reset => reset,
      sample_in => unsigned(sample_in_fir),
-     sample_in_enable => sample_in_fir_enable,
-     filter_select => filter_select,
+     sample_in_enable => sample_in_enable_fir,
+     filter_select => SW0,
      std_logic_vector(sample_out) => sample_out_fir,
      sample_out_ready => sample_out_fir_ready
 );
@@ -126,35 +127,70 @@ begin
     if rising_edge(clk_12megas) then
         addra_r <= addra_r_next;
         addra_w <= addra_w_next;
-        wea <= wea_next;
         record_enable <= record_enable_next;
+        play_enable <= play_enable_next;
+        ena <= ena_next;
+        wea <= wea_next;
+        sample_in_enable_fir <= sample_in_enable_fir_next;
         if reset='1' then
             state <= idle;
             addra_r <= (others => '0');
             addra_w <= (others => '0');
-            wea <= '0';
             record_enable <= '0';
+            play_enable <= '0';
+            ena <= '0';
+            wea <= '0';
+            sample_in_enable_fir <= '0';
         else
             state <= state_next;
         end if;
     end if;
 end process;
 
-process(state, addra_r, addra_w, BTNL, BTNC, BTNR, SW0, SW1, sample_out_ready)
+process(state, addra_w, addra_r, BTNL, BTNR, SW0, SW1)
 begin
     state_next <= state;
-    addra_r_next <= addra_r;
-    addra_w_next <= addra_w;
-    wea_next <= wea;
-    record_enable_next <= record_enable;
     case state is
         when idle =>
             if BTNL='1' then
                 state_next <= grabar;
-            elsif BTNC='1' then
-                addra_w_next <= (others => '0');
             elsif BTNR='1' then
                 state_next <= play;
+            end if;
+        when grabar =>
+            if BTNL='0' then
+                state_next <= idle;
+            end if;
+        when others =>
+            if SW1='1' then
+                if addra_r=addra_w then
+                    state_next <= idle;           
+                end if;
+            else
+                if SW0='1' and unsigned(addra_r)=0 then
+                    state_next <= idle;
+                end if;
+                if SW0='0' and addra_r=addra_w then
+                    state_next <= idle;           
+                end if;
+            end if;
+    end case;
+end process;
+
+process(state, state_next, addra_r, addra_w, BTNL, BTNC, BTNR, SW0, SW1, sample_out_ready, sample_request)
+begin
+    addra_r_next <= addra_r;
+    addra_w_next <= addra_w;
+    record_enable_next <= '0';
+    play_enable_next <= '0';
+    wea_next <= '0';
+    ena_next <= '0';
+    sample_in_enable_fir_next <= '0';
+    case state_next is
+        when idle =>
+            if BTNC='1' then
+                addra_w_next <= (others => '0');
+            elsif BTNR='1' then
                 if SW1='0' then
                     if SW0='1' then
                         addra_r_next <= addra_w;
@@ -165,31 +201,36 @@ begin
             end if;
         when grabar =>
             record_enable_next <= '1';
-            if BTNL='1' then
-                if sample_out_ready='1' then
-                    addra_w_next <= std_logic_vector(unsigned(addra_w) + 1);
-                    wea_next <= '1';
-                end if;
-            else
-                state_next <= idle;
+            if BTNL='1' and sample_out_ready='1' then
+                addra_w_next <= std_logic_vector(unsigned(addra_w) + 1);
+                wea_next <= '1';
+                ena_next <= '1';
             end if;
         when play =>
+            play_enable_next <= '1';
             if sample_request='1' then
+                ena_next <= '1';
+                sample_in_enable_fir_next <= '1';
                 if SW1='1' then
-                    sample_in_fir_next <= douta;
-                    sample_in_fir_next <= 
+                    addra_r_next <= std_logic_vector(unsigned(addra_r) + 1);
                 else
-                
+                    if SW0='1' then
+                        addra_r_next <= std_logic_vector(unsigned(addra_r) - 1);
+                    else
+                        addra_r_next <= std_logic_vector(unsigned(addra_r) + 1);
+                    end if;
                 end if;
             end if;
     end case;
-
 end process;
 
-ena <= sample_out_ready or sample_request;
 addra <= addra_w when state=grabar else
          addra_r when state=play else
          (others => '0');
-sample_in <= sample_out_fir
+sample_in <= sample_out_fir when SW1='1' else
+             douta;
+sample_in_fir <= douta when SW1='1' else
+                 (others => '0');
+                 
 
 end Behavioral;
