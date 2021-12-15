@@ -190,13 +190,11 @@ begin
         when idle =>
             if BTNC='1' then
                 addra_w_next <= (others => '0');
+                addra_r_next <= (others => '0');
             elsif BTNR='1' then
-                if SW1='0' then
-                    if SW0='1' then
-                        addra_r_next <= addra_w;
-                    else
-                        addra_r_next <= (others => '0');
-                    end if;
+                addra_r_next <= (others => '0');
+                if SW0='1' and SW1='0' then
+                    addra_r_next <= addra_w;
                 end if;
             end if;
         when grabar =>
@@ -211,14 +209,9 @@ begin
             if sample_request='1' then
                 ena_next <= '1';
                 sample_in_enable_fir_next <= '1';
-                if SW1='1' then
-                    addra_r_next <= std_logic_vector(unsigned(addra_r) + 1);
-                else
-                    if SW0='1' then
-                        addra_r_next <= std_logic_vector(unsigned(addra_r) - 1);
-                    else
-                        addra_r_next <= std_logic_vector(unsigned(addra_r) + 1);
-                    end if;
+                addra_r_next <= std_logic_vector(unsigned(addra_r) + 1); 
+                if SW0='1' and SW1='0' then
+                    addra_r_next <= std_logic_vector(unsigned(addra_r) - 1);
                 end if;
             end if;
     end case;
@@ -227,9 +220,9 @@ end process;
 addra <= addra_w when state=grabar else
          addra_r when state=play else
          (others => '0');
-sample_in <= sample_out_fir when SW1='1' else
+sample_in <= not sample_out_fir(sample_out_fir'length-1) & sample_out_fir(sample_out_fir'length-2 downto 0) when SW1='1' else
              douta;
-sample_in_fir <= douta when SW1='1' else
+sample_in_fir <= not douta(douta'length-1) & douta(douta'length-2 downto 0) when SW1='1' else
                  (others => '0');
                  
 

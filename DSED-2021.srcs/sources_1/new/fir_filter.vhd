@@ -58,7 +58,7 @@ begin
 end process;
 
 -- Next state logic
-process(state, sample_in_enable, sample_in, x0, x1, x2, x3, x4)
+process(state, sample_in_enable, sample_in, x0, x1, x2, x3, x4,filter_select)
 begin
     state_next <= state;
     x0_next <= x0;

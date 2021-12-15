@@ -26,7 +26,7 @@ component controlador is Port (
 );
 end component;
 signal clk_100Mhz, reset, micro_clk, micro_data, micro_LR, jack_sd, jack_pwm, BTNL, BTNC, BTNR, SW0, SW1 : std_logic := '0';
-constant clk_period : time := 100 ns;
+constant clk_period : time := 10 ns;
 
 begin
 
