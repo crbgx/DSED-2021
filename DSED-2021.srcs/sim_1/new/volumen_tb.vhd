@@ -11,10 +11,10 @@ architecture Behavioral of volumen_tb is
 component volumen 
 Port ( clk : in STD_LOGIC;
        reset : in STD_LOGIC;
-       sample_in : in signed (sample_size-1 downto 0);
+       sample_in : in std_logic_vector (sample_size-1 downto 0);
        subir_btn: in STD_LOGIC; 
        bajar_btn: in STD_LOGIC;
-       sample_out : out signed (sample_size-1downto 0));
+       sample_out : out std_logic_vector (sample_size-1downto 0));
 end component;
 
 signal clk, reset, subir_btn, bajar_btn : std_logic := '0';
@@ -26,10 +26,10 @@ begin
 U1 : volumen port map (
     clk => clk,
     reset => reset,
-    sample_in => signed(sample_in),
+    sample_in => sample_in,
     subir_btn => subir_btn, 
     bajar_btn => bajar_btn,
-    std_logic_vector(sample_out) => sample_out
+    sample_out => sample_out
 );
 
 process 
@@ -42,7 +42,7 @@ end process;
 
 process
 begin
-    sample_in <= "11000110";
+    sample_in <= "00001100"; -- 12
     subir_btn <= '1';
     wait for clk_period;
     subir_btn <= '1';
