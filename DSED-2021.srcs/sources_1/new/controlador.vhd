@@ -13,6 +13,8 @@ Port (
     BTNR: in STD_LOGIC;
     SW0: in STD_LOGIC;
     SW1: in STD_LOGIC;
+    SW14: in STD_LOGIC;
+    SW15: in STD_LOGIC;
     --To/From the microphone
     micro_clk : out STD_LOGIC;
     micro_data : in STD_LOGIC;
@@ -70,13 +72,23 @@ component fir_filter Port (
        sample_out_ready : out STD_LOGIC);
 end component;
 
--- Señales internas
+-- Controlador Volumen
+component volumen Port ( 
+       clk : in STD_LOGIC;
+       reset : in STD_LOGIC;
+       sample_in : in signed (sample_size-1 downto 0);
+       subir_btn: in STD_LOGIC; 
+       bajar_btn: in STD_LOGIC;
+       sample_out : out signed (sample_size-1 downto 0));
+end component;
+
+-- Seï¿½ales internas
 type state_type is (idle, grabar, play);
 signal state, state_next : state_type := idle;
 signal clk_12megas, sample_out_ready, sample_request, play_enable, play_enable_next, sample_in_enable_fir, sample_in_enable_fir_next : std_logic := '0';
 signal record_enable, record_enable_next, sample_in_fir_enable : std_logic := '0';
 signal filter_select, sample_out_fir_ready, ena, ena_next, wea, wea_next : std_logic := '0';
-signal sample_out, sample_in, douta, sample_out_fir, sample_in_fir : std_logic_vector(sample_size-1 downto 0) := (others => '0');
+signal sample_out, sample_out_volumen, sample_in_volumen, sample_in, douta, sample_out_fir, sample_in_fir : std_logic_vector(sample_size-1 downto 0) := (others => '0');
 signal addra, addra_r, addra_r_next, addra_w, addra_w_next : STD_LOGIC_VECTOR(18 DOWNTO 0) := (others => '0');
 
 
@@ -120,6 +132,15 @@ fir : fir_filter port map (
      filter_select => SW0,
      std_logic_vector(sample_out) => sample_out_fir,
      sample_out_ready => sample_out_fir_ready
+);
+
+vol : volumen port map (
+    clk => clk_12megas,
+    reset => reset,
+    sample_in => signed(sample_in_volumen),
+    std_logic_vector(sample_out) => sample_out_volumen,
+    subir_btn => SW15,
+    bajar_btn => SW14
 );
 
 process(clk_12megas)
@@ -220,10 +241,11 @@ end process;
 addra <= addra_w when state=grabar else
          addra_r when state=play else
          (others => '0');
-sample_in <= not sample_out_fir(sample_out_fir'length-1) & sample_out_fir(sample_out_fir'length-2 downto 0) when SW1='1' else
-             douta;
 sample_in_fir <= not douta(douta'length-1) & douta(douta'length-2 downto 0) when SW1='1' else
                  (others => '0');
+sample_in_volumen <= sample_out_fir when SW1='1' else
+                     not douta(douta'length-1) & douta(douta'length-2 downto 0);
+sample_in <= not sample_out_fir(sample_out_fir'length-1) & sample_out_fir(sample_out_fir'length-2 downto 0);
                  
 
 end Behavioral;

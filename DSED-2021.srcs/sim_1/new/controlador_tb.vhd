@@ -16,6 +16,8 @@ component controlador is Port (
     BTNR: in STD_LOGIC;
     SW0: in STD_LOGIC;
     SW1: in STD_LOGIC;
+    SW14: in STD_LOGIC;
+    SW15: in STD_LOGIC;
     --To/From the microphone
     micro_clk : out STD_LOGIC;
     micro_data : in STD_LOGIC;
@@ -25,7 +27,7 @@ component controlador is Port (
     jack_pwm : out STD_LOGIC
 );
 end component;
-signal clk_100Mhz, reset, micro_clk, micro_data, micro_LR, jack_sd, jack_pwm, BTNL, BTNC, BTNR, SW0, SW1 : std_logic := '0';
+signal clk_100Mhz, reset, micro_clk, micro_data, micro_LR, jack_sd, jack_pwm, BTNL, BTNC, BTNR, SW0, SW1, SW14, SW15 : std_logic := '0';
 constant clk_period : time := 10 ns;
 
 begin
@@ -38,6 +40,8 @@ BTNC => BTNC,
 BTNR => BTNR,
 SW0 => SW0,
 SW1 => SW1,
+SW14 => SW14,
+SW15 => SW15,
 micro_clk => micro_clk, 
 micro_data => micro_data,
 micro_LR => micro_LR,
