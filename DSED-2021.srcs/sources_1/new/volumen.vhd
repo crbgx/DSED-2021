@@ -9,10 +9,20 @@ Port ( clk : in STD_LOGIC;
        sample_in : in std_logic_vector (sample_size-1 downto 0);
        subir_btn: in STD_LOGIC; 
        bajar_btn: in STD_LOGIC;
-       sample_out : out std_logic_vector (sample_size-1 downto 0));
+       sample_out : out std_logic_vector (sample_size-1 downto 0);
+       an : out STD_LOGIC_VECTOR (7 downto 0);
+       seg : out STD_LOGIC_VECTOR (6 downto 0));
 end volumen;
 
 architecture Behavioral of volumen is
+
+component led_display Port ( 
+   clk : in STD_LOGIC;
+   reset : in STD_LOGIC;
+   an : out STD_LOGIC_VECTOR (7 downto 0);
+   seg : out STD_LOGIC_VECTOR (6 downto 0);
+   num : in unsigned(4 downto 0));
+end component;
 
 type state_type is (idle, subir, bajar);
 signal state, state_next : state_type := idle;
@@ -23,6 +33,14 @@ signal mult_coef : unsigned (10 downto 0);
 signal mult : unsigned (sample_size+10 downto 0);
 
 begin
+
+led : led_display port map(
+    clk => clk,
+    reset => reset,
+    an => an,
+    seg => seg,
+    num => vol
+);
 
 process(clk)
 begin

@@ -21,7 +21,10 @@ Port (
     micro_LR : out STD_LOGIC;
     --To/From the mini-jack
     jack_sd : out STD_LOGIC;
-    jack_pwm : out STD_LOGIC
+    jack_pwm : out STD_LOGIC;
+    --To/From the led displays
+    an : out STD_LOGIC_VECTOR (7 downto 0);
+    seg : out STD_LOGIC_VECTOR (6 downto 0)
 );
 end controlador;
 
@@ -79,7 +82,9 @@ component volumen Port (
        sample_in : in std_logic_vector (sample_size-1 downto 0);
        subir_btn: in STD_LOGIC; 
        bajar_btn: in STD_LOGIC;
-       sample_out : out std_logic_vector (sample_size-1 downto 0));
+       sample_out : out std_logic_vector (sample_size-1 downto 0);
+       an : out STD_LOGIC_VECTOR (7 downto 0);
+       seg : out STD_LOGIC_VECTOR (6 downto 0));
 end component;
 
 -- Se?ales internas
@@ -140,7 +145,9 @@ vol : volumen port map (
     sample_in => sample_in_volumen,
     sample_out => sample_in,
     subir_btn => SW15,
-    bajar_btn => SW14
+    bajar_btn => SW14,
+    an => an,
+    seg => seg
 );
 
 process(clk_12megas)
