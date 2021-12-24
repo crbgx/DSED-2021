@@ -87,7 +87,7 @@ component volumen Port (
        seg : out STD_LOGIC_VECTOR (6 downto 0));
 end component;
 
--- Se?ales internas
+-- Senales internas
 type state_type is (idle, grabar, play);
 signal state, state_next : state_type := idle;
 signal clk_12megas, sample_out_ready, sample_request, play_enable, play_enable_next, sample_in_enable_fir, sample_in_enable_fir_next : std_logic := '0';
