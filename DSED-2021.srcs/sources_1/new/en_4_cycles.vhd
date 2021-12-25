@@ -12,31 +12,14 @@ end en_4_cycles;
 
 architecture Behavioral of en_4_cycles is
 
+-- Señal de cuenta interna
 signal count, count_next : unsigned(1 downto 0) := (others => '0');
+-- Señal para mantener a 0 en_2_cycles y en_4_cycles hasta el siguiente ciclo de reloj en el que
+-- la señal de reset valga '0'
 signal reset_hold : std_logic := '0';
---signal reset_hold, clk : std_logic := '0';
---component clk_wiz_0 port (
---    clk_out1: out std_logic;
---    clk_in1: in std_logic);
---end component;
 
 begin
 
---UUT : clk_wiz_0 port map(
---    clk_out1 => clk,
---    clk_in1 => clk_12megas
---);
-
---process(clk, reset)
---begin
---    if reset='1' then
---        count <= (others => '0');
---        reset_hold <= '1';
---    elsif rising_edge(clk) then
---        count <= count_next;
---        reset_hold <= '0';
---    end if;
---end process;
 process(clk_12megas, reset)
 begin
     if reset='1' then
@@ -48,10 +31,19 @@ begin
     end if;
 end process;
 
-clk_3megas <= count(1) xor count(0);
-en_2_cycles <= not count(0) and not reset_hold;
-en_4_cycles <= (not count(1)) and count(0); 
+-- Valor de cuenta para el ciclo siguiente
 count_next <= count + 1 when reset_hold='0' else
               (others => '0');
+
+-- Optimizando, el reloj de 3 MHz se mantiene activo cuando cuenta vale "01" o "10",
+-- por lo que se puede obtener cuando count(1) o count(0) estan activos de forma exclusiva
+clk_3megas <= count(1) xor count(0);
+-- Igual que con clk_3megas, en_2_cycles se mantiene activo para "00" y "10", of
+-- lo que es lo mismo, cuando count(0) vale '0'
+en_2_cycles <= not count(0) and not reset_hold;
+-- Igual que con en_2_cycles, en_4_cycles se mantiene activo para "01" o
+-- lo que es lo mismo, cuando count(0) vale '1' y count(1) vale '0'
+en_4_cycles <= (not count(1)) and count(0); 
+
 
 end Behavioral;
