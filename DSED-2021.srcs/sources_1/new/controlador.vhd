@@ -150,6 +150,7 @@ vol : volumen port map (
     seg => seg
 );
 
+-- Logica de estado actual
 process(clk_12megas)
 begin
     if rising_edge(clk_12megas) then
@@ -175,11 +176,13 @@ begin
     end if;
 end process;
 
+-- Logica del estado siguiente
 process(state, addra_w, addra_r, BTNL, BTNR, SW0, SW1)
 begin
     state_next <= state;
     case state is
         when idle =>
+            -- En funcion de que boton este presionado pasar a grabar o a reproducir
             if BTNL='1' then
                 state_next <= grabar;
             elsif BTNR='1' then
@@ -190,6 +193,7 @@ begin
                 state_next <= idle;
             end if;
         when others =>
+            -- En funcion de la direccion de reproduccion comprobar que no se ha llegado al limite de la grabacion
             if SW1='1' then
                 if addra_r=addra_w then
                     state_next <= idle;           
@@ -205,6 +209,7 @@ begin
     end case;
 end process;
 
+-- Logica de flujo de datos
 process(state, state_next, addra_r, addra_w, BTNL, BTNC, BTNR, SW0, SW1, sample_out_ready, sample_request)
 begin
     addra_r_next <= addra_r;
@@ -245,11 +250,14 @@ begin
     end case;
 end process;
 
+-- Asignar a addra la señal que contiene la posicion de lectura o escritura
 addra <= addra_w when state=grabar else
          addra_r when state=play else
          (others => '0');
+-- Convertir de binario a C2 solo si se esta usando el filtro fir
 sample_in_volumen <= not sample_out_fir(sample_out_fir'length-1) & sample_out_fir(sample_out_fir'length-2 downto 0) when SW1='1' else
                      douta;
+-- Convertir de C2 a binario solo si se esta usando el filtro fir                     
 sample_in_fir <= not douta(douta'length-1) & douta(douta'length-2 downto 0) when SW1='1' else
                  (others => '0');
                  

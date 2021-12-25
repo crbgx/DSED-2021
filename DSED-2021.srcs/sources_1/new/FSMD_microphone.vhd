@@ -15,12 +15,14 @@ end FSMD_microphone;
 
 architecture Behavioral of FSMD_microphone is
 
+-- Señaled maquina de estados
 type state_type is (start, s0, s1, s2);
 signal state, state_next : state_type := start;
 signal dato1, dato2, dato1_next, dato2_next : unsigned(sample_size-1 downto 0) := (others => '0');
 signal primer_ciclo, primer_ciclo_next : std_logic := '0';
 signal cuenta, cuenta_next : unsigned(8 downto 0) := (others => '0');
 signal sample_next, sample : STD_LOGIC_VECTOR(sample_size-1 downto 0) := (others => '0');
+
 begin
 
 process(clk_12megas)
@@ -39,6 +41,7 @@ begin
     end if;
 end process;
 
+-- Logica de estado siguiente
 process(state, cuenta)
 begin
     state_next <= state;
@@ -64,6 +67,7 @@ begin
     end case;
 end process;
 
+-- Logica de flujo de datos
 process(state, state_next, cuenta, dato1, dato2, primer_ciclo, micro_data, sample)
 begin
     cuenta_next <= cuenta;
@@ -113,6 +117,7 @@ begin
     end case;
 end process;
 
+-- Logica de salida
 sample_out_ready <= enable_4_cycles when cuenta=256 else
                     enable_4_cycles when primer_ciclo='1' and cuenta = 106 else
                     '0';

@@ -32,7 +32,7 @@ component FSMD_microphone
            reset : in STD_LOGIC;
            enable_4_cycles : in STD_LOGIC;
            micro_data : in STD_LOGIC;
-           sample_out : out STD_LOGIC_VECTOR(7 downto 0) := (others => '0');       --(sample_size-1 downto 0)
+           sample_out : out STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
            sample_out_ready : out STD_LOGIC := '0');
 end component;
 component en_4_cycles
@@ -47,7 +47,7 @@ port(
     clk_12megas: in std_logic;
     reset: in std_logic;
     en_2_cycles: in std_logic;
-    sample_in: in std_logic_vector(7 downto 0);     --sample_size-1 downto 0 (VER CLASE 18)
+    sample_in: in std_logic_vector(7 downto 0);
     sample_request: out std_logic;
     pwm_pulse: out std_logic
 );
