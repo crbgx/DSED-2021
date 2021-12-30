@@ -15,7 +15,7 @@ end FSMD_microphone;
 
 architecture Behavioral of FSMD_microphone is
 
--- Señaled maquina de estados
+-- Señales maquina de estados
 type state_type is (start, s0, s1, s2);
 signal state, state_next : state_type := start;
 signal dato1, dato2, dato1_next, dato2_next : unsigned(sample_size-1 downto 0) := (others => '0');
@@ -122,5 +122,6 @@ sample_out_ready <= enable_4_cycles when cuenta=256 else
                     enable_4_cycles when primer_ciclo='1' and cuenta = 106 else
                     '0';
 sample_out <= sample;
-                
+
+
 end Behavioral;

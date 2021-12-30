@@ -20,10 +20,13 @@ type state_type is (idle, s0, s1, s2, s3, s4, s5, s6, finish);
 signal state, state_next : state_type := idle;
 signal x0, x1, x2, x3, x4, x0_next, x1_next, x2_next, x3_next, x4_next : signed(7 downto 0) := (others => '0');
 signal r1, r2, r3, r1_next, r2_next, r3_next : signed(7 downto 0) := (others => '0');
--- Señal de salida (para mantener el valor de salida estable)
+
+-- Señales de salida (para mantener el valor de salida estable)
 signal sample_out_int, sample_out_next : signed(sample_size-1 downto 0) := (others => '0');
+
 -- Señales del multiplicador y sumador
 signal sum, mult_in1, mult_in2  : signed(7 downto 0) := (others => '0');
+
 -- Coeficientes de paso bajo y paso alto
 type coef is ARRAY(4 downto 0) of signed(7 downto 0);
 constant lpf : coef := ("00000101", "00011111", "00111001", "00011111", "00000101");
@@ -46,8 +49,9 @@ begin
         x2 <= x2_next;
         x3 <= x3_next;
         x4 <= x4_next;
+        
+        -- En el caso de reset, vaciar filtro y pasar al estado idle
         if reset='1' then
-            -- En el caso de reset, vaciar filtro y pasar al estado idle
             state <= idle;
             r1 <= (others => '0');
             r2 <= (others => '0');
@@ -59,6 +63,7 @@ begin
             x3 <= (others => '0');
             x4 <= (others => '0');
         end if;
+        
     end if;
 end process;
 
@@ -71,6 +76,7 @@ begin
     x2_next <= x2;
     x3_next <= x3;
     x4_next <= x4;
+    
     -- Cargar los coeficientes en base a la señal filter_select
     if filter_select='1' then
         c0 <= hpf(0);
@@ -85,10 +91,12 @@ begin
         c3 <= lpf(3);
         c4 <= lpf(4);
     end if;
+    
     case state is
         when idle =>
             if sample_in_enable = '1' then
                 state_next <= s0;
+                
                 -- Desplazar los valores de entrada descartando el mas antiguo
                 x0_next <= signed(sample_in);
                 x1_next <= x0;
@@ -96,6 +104,7 @@ begin
                 x3_next <= x2;
                 x4_next <= x3;
             end if;
+            
         -- Recorrer todos los estados hasta llegar a idle
         when s0 =>
             state_next <= s1;
@@ -118,8 +127,9 @@ end process;
 
 -- Salida del multiplicador al registro 3
 -- Para mejorar la precision del multiplicador, antes de desplazar 7 posiciones hacia la derecha
--- se suma uno despues de desplazar 6 posiciones para redondear el resultado del multiplicador
+-- se suma uno tras desplazar 6 posiciones para redondear el resultado del multiplicador
 r3_next <= resize(shift_right(shift_right(mult_in1 * mult_in2, 6)+1, 1), 8); 
+
 -- Señales de entrada del multiplicador en funcion del estado
 mult_in1 <= c0 when state=s0 else
             c1 when state=s1 else
@@ -133,8 +143,10 @@ mult_in2 <= x0 when state=s0 else
             x3 when state=s3 else
             x4 when state=s4 else
             (others => '0');
+            
 -- Salida del sumador
 sum <= r1 + r2;
+
 -- Señales de entrada del sumador en funcion del estado
 r1_next <=  r3 when state=s1 else
             sum when state=s3 else
@@ -153,5 +165,6 @@ sample_out_next <= sum when state=s6 else
 sample_out_ready <= '1' when state=finish else
                     '0';
 sample_out <= sample_out_int;
+
 
 end Behavioral;
