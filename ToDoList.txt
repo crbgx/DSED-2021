@@ -1,6 +1,3 @@
-Bloque 2:
-Tarea 2.6 Hacer (el bicis)
-
 Bloque 3:
-Tarea 3.4 sin hacer (el bicis)
+Tarea 3.4 fsmd controlador hecho, que mas queda? (el bicis)
 Tarea 3.7 hay que documentar las dos mejoras (efren)
